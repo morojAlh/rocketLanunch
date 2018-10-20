@@ -3,13 +3,31 @@
   padding-bottom: 1rem;
   background-color: #333333;
   color:#5ed5ab;
- 
+
 }
 .navbar .nav-link:hover {
-  
+
   color:#efc26c;
- 
+
 }
+
+#logo {
+  float: left;
+  width: 60px;
+  height: 60px;
+  /* background: #555; */
+}
+
+.h2 {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.linkColor:focus, .linkColor:hover, .linkColor:active {
+  color: #bd0760;
+}
+
 /*!
  * Start Bootstrap - One Page Wonder v5.0.0 (https://startbootstrap.com/template-overviews/one-page-wonder)
  * Copyright 2013-2018 Start Bootstrap
@@ -63,7 +81,7 @@ h6 {
   font-size: 1rem;
   letter-spacing: 0.1rem;
   font-weight: 700;
- 
+
 }
 
 .navbar-custom .navbar-nav .nav-item .nav-link {
@@ -97,7 +115,7 @@ h6 {
   background-color: #5ed5ab;
   border-color: #333333;
   color:#333333;
-  
+
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
@@ -119,7 +137,7 @@ min-height: 300px;
 .cntactus .field{
 
 	min-height:300px;
-	
+
 	padding-top:40px;
 	padding-bottom:40px;
 }

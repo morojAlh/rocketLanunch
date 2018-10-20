@@ -33,9 +33,10 @@
     <nav class="navbar" >
       <div class="container">
         <ul class="nav navbar-nav">
-        <li><img id="logo" src="img/logo2.png" alt="logo"/><a class="navbar navbar-brand" href="default.html" >ROCKET LAUNCH</a></li></ul>
+        <li><img id="logo" src="img/logo2.png" alt="logo"/>
+          <a class="navbar navbar-brand" href="default.html" >ROCKET LAUNCH</a></li></ul>
 		<ul class="nav navbar-left">
-		<li><a class="navbar nav-link" href="AllLaunches.html" >All Launch</a></li>
+		<li><a class="navbar nav-link" href="AllLaunches.html" >All Launches</a></li>
 		<li><a class="navbar nav-link" href="about.html" >About</a></li>
 		<li><a class="navbar nav-link" href="contact.html" >Contact</a></li>
 		</ul>
@@ -50,6 +51,7 @@
       </div>
     </nav>
     <div>
+      <h2 class="h2">All Launches </h2>
         <table align= "center"class="table center text-center "  style="width:50%"  id="reservations">
             <tr>
                 <th scope="col">Name</th>
@@ -105,7 +107,7 @@
 <!-- Footer -->
     <footer class="py-5 bg-black">
       <div class="container">
-        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+        <p class="m-0 text-center text-white small">Copyright &copy; Rocket Launch Website 2018</p>
       </div>
       <!-- /.container -->
     </footer>
@@ -144,7 +146,7 @@
       var row_data = row_data + '<tr class="table-success">' +
         ' <td class="table-active">' + local_data[i].name +'</td>' +
         ' <td class="table-primary">' + local_data[i].changed + '</td>' +
-        ' <td class="table-secondary">' + '<a src="">Learn More</a>'+ '</td>' +
+        ' <td class="table-secondary">' + '<a class="linkColor" href="">Learn More</a>'+ '</td>' +
         '</tr>';
     }
     var table_body_element = document.createElement('tbody');
