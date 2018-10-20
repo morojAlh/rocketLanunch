@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <meta charset="utf-8" />
+
+    
+	 <!-- Bootstrap core CSS -->
+     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Custom fonts for this template -->
+     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+ 
+     <!-- Custom styles for this template -->
+     <link href="css/one-page-wonder.min.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyBP1qnryWrAFRI13KVUpU1UMaUNMhXNSsk",
+              authDomain: "spaceapp-87f95.firebaseapp.com",
+              databaseURL: "https://spaceapp-87f95.firebaseio.com",
+              projectId: "spaceapp-87f95",
+              storageBucket: "spaceapp-87f95.appspot.com",
+              messagingSenderId: "408021766763"
+            };
+            firebase.initializeApp(config);
+          </script>
+</head>
+<body>
+       <!-- Navigation -->
+       <nav class="navbar" >
+            <div class="container">
+              <ul class="nav navbar-nav">
+              <li><a class="navbar navbar-brand" href="index.html" >ROCKET LAUNCH</a></li></ul>
+              <ul class="nav navbar-left">
+              <li><a class="navbar nav-link" href="signup.html" >All Launch</a></li>
+              <li><a class="navbar nav-link" href="about.html" >About</a></li>
+              <li><a class="navbar nav-link" href="contact.html" >Contact</a></li>
+              </ul>
+               <ul class="nav navbar-right">
+              <li><a class="navbar nav-link" href="signup.html" >Sign Up</a></li>
+              <li><a class="navbar nav-link" href="login.html" >Log In</a></li>
+              </ul>
+              
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+              </div>
+              
+            </div>
+          </nav>
+		  
+		  
+		  <section class="cntactus text-center" >
+	<div class="field">
+      <div class="container">
+
+    <h2>Create Your Account</h2>
+    
+	
+    <form role="form">
+<div class="form-group">
+        <input type="text" class="form-control input-md" placeholder="First Name">
+		</div>
+		<div class="form-group">
+        <input type="text" class="form-control input-md" ID="lname" runat="server" placeholder="Last Name">
+		</div>
+	<div class="form-group">
+	
+        <input type="text" class="form-control input-s-resize" ID="emailUp" runat="server"  placeholder="Email">
+		</div>
+		<div class="form-group">
+        <input type="text" class="form-control input-md" ID="passUp" runat="server" placeholder="Password">
+		</div>
+		<div class="form-group">
+        <input type="text" class="form-control input-md" ID="lname" runat="server" placeholder="Re-Enter Password">
+		</div>
+	
+		<Button class="btn btn-secondary rounded-pill btn-lg " runat="server" Text="" ID="send" OnClick="signUp()" >Sign Up</button>
+		</form>
+		</div>
+		</div>
+		
+		
+		</section>
+
+    
+                
+    </div>
+ <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <script>
+    
+    function signUp(){
+
+var email = $('#emailUp').val();
+ var password = $('#passUp').val();
+ var fname = $('#fname').val();
+ var lname = $('#lname').val();
+//  var gender = $('#gender').val();
+
+var rates = document.getElementsByName('gender');
+var rate_value;
+for(var i = 0; i < rates.length; i++){
+    if(rates[i].checked){
+        rate_value = rates[i].value;
+    }
+}
+
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+                 var myUserId = firebase.auth().currentUser.uid;
+               var topUserPostsRef = firebase.database().ref('Users/' + myUserId)
+                  // var newMessageRef = messageListRef.; // push for id
+                  topUserPostsRef.set({
+                    fname:fname,
+                    lname:lname,
+                    gender:rate_value
+                  });
+
+                  window.location.href = 'default.html';
+
+ }
+ </script>
+</body>
+</html>

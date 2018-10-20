@@ -1,0 +1,133 @@
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #333333;
+  color:#5ed5ab;
+ 
+}
+.navbar .nav-link:hover {
+  
+  color:#efc26c;
+ 
+}
+/*!
+ * Start Bootstrap - One Page Wonder v5.0.0 (https://startbootstrap.com/template-overviews/one-page-wonder)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ */
+
+body {
+  font-family: 'Lato';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Catamaran';
+  font-weight: 900 !important;
+}
+
+.btn-xl {
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.bg-black {
+  background-color: #333333 !important;
+}
+
+.rounded-pill {
+  border-radius: 5rem;
+}
+
+/* .navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #000;
+} */
+
+.navbar-custom {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #5ed5ab;
+}
+
+.navbar-custom .navbar-brand {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+ 
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+
+.bg-primary {
+  background-color: #ee0979 !important;
+}
+
+.btn-primary {
+  background-color: #ee0979;
+  border-color: #ee0979;
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: #bd0760 !important;
+  border-color: #bd0760 !important;
+}
+
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+}
+
+.btn-secondary {
+  background-color: #5ed5ab;
+  border-color: #333333;
+  color:#333333;
+  
+}
+
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+  background-color: #white !important;
+  border-color: #333333 !important;
+}
+
+.btn-secondary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+}
+.cntactus{
+background:url('/img/4.jpg') no-repeat center center fixed;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+background-size: cover;
+min-height: 300px;
+}
+.cntactus .field{
+
+	min-height:300px;
+	
+	padding-top:40px;
+	padding-bottom:40px;
+}
+.cntactus h2{
+	margin-top:40px;
+	color:#333333;
+}
+.cntactus h3{
+	margin-bottom:40px;
+	color:#333333;
+}

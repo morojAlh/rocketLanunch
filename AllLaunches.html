@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>
+        All Launches
+    </title>
+	 <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+	<meta charset="utf-8" />
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="launch.json"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" >
+      <div class="container">
+        <ul class="nav navbar-nav">
+        <li><img id="logo" src="img/logo2.png" alt="logo"/><a class="navbar navbar-brand" href="default.html" >ROCKET LAUNCH</a></li></ul>
+		<ul class="nav navbar-left">
+		<li><a class="navbar nav-link" href="AllLaunches.html" >All Launch</a></li>
+		<li><a class="navbar nav-link" href="about.html" >About</a></li>
+		<li><a class="navbar nav-link" href="contact.html" >Contact</a></li>
+		</ul>
+		 <ul class="nav navbar-right">
+        <li><a class="navbar nav-link" href="signup.html" >Sign Up</a></li>
+        <li><a class="navbar nav-link" href="login.html" >Log In</a></li>
+		</ul>
+
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+        </div>
+
+      </div>
+    </nav>
+    <div>
+        <table align= "center"class="table center text-center "  style="width:50%"  id="reservations">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">More</th>
+            </tr>
+            <!-- <tr>
+                <td>
+                    Ariane 5 ECA
+                </td>
+                <td>
+                    October 20th, 2018
+                </td>
+                <td>
+                    <a href="Ariane.html">More info?</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pegasus XL
+                </td>
+                <td>
+                    October 26th, 2018
+                </td>
+                <td>
+                    <a href="Pegasus.html">More info?</a>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    H-IIA
+                </td>
+                <td>
+                    October 29, 2018
+                </td>
+                <td>
+                    <a href="H-IIA.html">More info?</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Delta
+                </td>
+                <td>
+                    Soon
+                </td>
+                <td>
+                    <a href="Delta.html">More info?</a>
+                </td> -->
+            </tr>
+        </table>
+    </div>
+<!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <script>
+        var local_data = data;
+        // var launches = [];
+        // var dynamicUrl = 'https://launchlibrary.net/1.4/launch?startdate=2017-10-19&limit=100';
+        // $.getJSON(dynamicUrl, function(data) {
+        // console.log("This is an example of a dynamic JSON file being served by a web server.")
+        // console.log(data);
+        // missions = data;
+        // console.log(data.missions[0].infoURL);
+        // $('#reservations tr').each(function (i) {
+        // $(this).find('td').html(reservations[i].data.missions[i].id);
+        // });
+        // for (i = 0; i < missions.length; i++) {
+        // var tr = "<tr><td>"+data.launches.id+"</td><td>"+data.launches.id+"</td><td>"+data.launches.id+"</td></tr>";
+        // $("#reservations").append(tr);
+        //     }
+        // });
+
+            // for (i = 0; i < missions.length; i++) {
+            //     var tr = document.createElement('TR');
+            //     for (j = 0; j < stock[i].length; j++) {
+            //         var td = document.createElement('TD')
+            //         td.appendChild(document.createTextNode(stock[i].id));
+            //         tr.appendChild(td)
+            //     }
+            //     tableBody.appendChild(tr);
+            // }
+
+
+            var local_data = data;
+    var row_data = '';
+    for (var i = 0; i < local_data.length; i++) {
+      var row_data = row_data + '<tr class="table-success">' +
+        ' <td class="table-active">' + local_data[i].name +'</td>' +
+        ' <td class="table-primary">' + local_data[i].changed + '</td>' +
+        ' <td class="table-secondary">' + '<a src="">Learn More</a>'+ '</td>' +
+        '</tr>';
+    }
+    var table_body_element = document.createElement('tbody');
+    table_body_element.innerHTML = row_data;
+    document.getElementById('reservations').appendChild(table_body_element);
+
+
+        //     console.log(launches);
+        // for (i = 0; i < launches.length; i++) {
+        // var tr = "<tr><td>"+launches[i].id+"</td><td>"+launches[i].id+"</td><td>"+launches[i].id+"</td></tr>";
+        // $("#reservations").append(tr);
+        //     }
+
+    </script>
+</body>
+</html>
